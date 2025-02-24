@@ -23,7 +23,7 @@ def mod_exp(num, exponent, modulo_base)
 end
 
 #första subbarrayen är public key, andra är private key
-def key_generator(e, p, q)
+def generate_keys(e, p, q)
   if !relative_prime((p-1)*(q-1), e)
     raise ArgumentError.new("e must be relative prime to (p-1)*(q-1)")
   end

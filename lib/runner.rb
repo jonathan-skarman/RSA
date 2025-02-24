@@ -7,7 +7,7 @@ message = "Hello, World!"
 
 
 
-public_key, private_key = key_generator(e, p, q)
+public_key, private_key = generate_keys(e, p, q)
 encoded_message = encode(message, public_key[0], public_key[1])
 hacked_key = hack_key(public_key[0], public_key[1])
 decoded_message = decode(encoded_message, private_key[0], private_key[1])
