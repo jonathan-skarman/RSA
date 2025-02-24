@@ -1,12 +1,11 @@
 require_relative "../functions"
 
-d =
-n =
-encoded_message = ""
+encoded_message = 203
+private_key = [2753, 3233]
 
 
-private_key = [d, n]
-decoded_message = decode(encoded_message, private_key[0], private_key[1])
+
+decoded_message = decode_num(encoded_message, private_key[0], private_key[1])
 
 
 

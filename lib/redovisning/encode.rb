@@ -1,14 +1,14 @@
 require_relative "../functions"
 
-e =
-p =
-q =
-message = ""
+e = 17
+p = 61
+q = 53
+message = 314
 
 
 
 public_key, private_key = generate_keys(e, p, q)
-encoded_message = encode(message, public_key[0], public_key[1])
+encoded_message = encode_num(message, public_key[0], public_key[1])
 
 
 

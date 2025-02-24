@@ -35,7 +35,7 @@ def generate_keys(e, p, q)
   return[[e, n], [d, n]]
 end
 
-def encode(message, e, n)
+def encode_text(message, e, n)
   arr = []
   message.bytes.each do |byte|
     arr << mod_exp(byte, e, n).to_i
@@ -44,13 +44,21 @@ def encode(message, e, n)
   arr
 end
 
-def decode(y, d, n)
+def decode_text(y, d, n)
   arr = []
   y.each do |byte|
     arr << mod_exp(byte, d, n).to_i
   end
 
   arr.pack("C*")
+end
+
+def encode_num(message, e, n)
+  return mod_exp(message, e, n).to_i
+end
+
+def decode_num(y, d, n)
+  return mod_exp(y, d, n).to_i
 end
 
 def hack_key(e, n)
