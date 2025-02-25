@@ -1,6 +1,6 @@
 require_relative "../functions"
 
-encoded_message = 203
+encoded_message =
 private_key = [2753, 3233]
 
 

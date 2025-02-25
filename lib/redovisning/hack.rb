@@ -1,7 +1,7 @@
 require_relative "../functions"
 
-encoded_message = 82752
-public_key = [186447, 304891]
+encoded_message =
+public_key = [3, 230161]
 
 
 hacked_key = hack_key(public_key[0], public_key[1])

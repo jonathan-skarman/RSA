@@ -63,8 +63,12 @@ end
 
 def hack_key(e, n)
   p = 2
-  while n % p != 0
+  while n % p != 0 && p < n
     p += 1
+  end
+
+  if p == n
+    raise "fel med p"
   end
   q = n / p
 
